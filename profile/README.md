@@ -47,7 +47,6 @@ grapity gateway diff --spec payments-api --env staging --env prod
 ## Links
 
 - **Website:** [grapity.dev](https://grapity.dev)
-- **Vision document:** [grapity-foundational-doc.md](https://github.com/grapitydev/grapity.dev/blob/main/grapity-foundational-doc.md)
 
 ---
 
