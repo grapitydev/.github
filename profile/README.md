@@ -10,56 +10,14 @@ Where every API contract is validated, versioned, and ready to ship — across s
 
 ---
 
-Grapity is the missing enforcement layer between *"we have API specs"* and *"those specs reliably drive everything else."*
-
 A spec that breaks backward compatibility doesn't enter the registry. A spec without proper versioning doesn't enter the registry. Everything downstream — gateway config, generated clients, AI context, audit trails — is derived from contracts you can trust.
 
-## Platform Layers
-
-| Layer | Product | Purpose |
-|-------|---------|---------|
-| L1 | **Grapity Registry** | Contract guardian. Validates compat, enforces semver, manages deprecation. |
-| L2 | **Grapity Gateway** | From spec to production. Generates Kong/APISIX config, policy profiles, drift detection. |
-| L3 | **Grapity Forge** | Typed clients and consumers, forged from specs. |
-| L4 | **Grapity Schema** | AsyncAPI specs and schema registries, kept in sync. |
-| L5 | **Grapity Hub** | Every API in one place. Browse, explore, diff. |
-| L6 | **Grapity Mind** | Specs compressed for AI. LLM-optimised representations. |
-
-## Status
-
-**Pre-launch. Building in public.**
-
-All packages are Apache 2.0. The SaaS sells operations, not features.
-
-Phase 1 delivers Grapity Registry and Grapity Gateway. Follow along.
-
-## Quick Look
+**Pre-launch. Building in public.** All packages are Apache 2.0.
 
 ```bash
-# Validate and register your spec
 grapity registry push ./openapi.yaml --name payments-api
-
-# Provision to Kong, no ticket needed
 grapity gateway provision --spec payments-api@1.0.0 --env staging --profile public-api
-
-# Diff environments, catch drift
 grapity gateway diff --spec payments-api --env staging --env prod
 ```
 
-## Repos
-
-| Repo | Description |
-|------|-------------|
-| [grapity.dev](https://github.com/grapitydev/grapity.dev) | Landing page |
-
-## Links
-
-- **Website:** [grapity.dev](https://grapity.dev)
-
----
-
-<div align="center">
-
-*The API is what Grapity revolves around.*
-
-</div>
+**Website:** [grapity.dev](https://grapity.dev)
