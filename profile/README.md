@@ -20,4 +20,4 @@ grapity gateway provision --spec payments-api@1.0.0 --env staging --profile publ
 grapity gateway diff --spec payments-api --env staging --env prod
 ```
 
-**Website:** [grapity.dev](https://grapity.dev)
+**Website:** [grapity.dev](https://grapity.dev) &nbsp;·&nbsp; **X:** [@grapitydev](https://x.com/grapitydev)
