@@ -4,20 +4,19 @@
 
 ### **Gravity for APIs.**
 
-Where every API contract is validated, versioned, and ready to ship — across specs, gateways, and teams.
+Ship APIs that won't break your consumers.
 
 </div>
 
 ---
 
-A spec that breaks backward compatibility doesn't enter the registry. A spec without proper versioning doesn't enter the registry. Everything downstream — gateway config, generated clients, AI context, audit trails — is derived from contracts you can trust.
-
-**Pre-launch. Building in public.** All packages are Apache 2.0.
+**Self-hosted. Apache 2.0. Free forever.**
 
 ```bash
+npm install -g @grapity/grapity
+grapity init --local
+grapity serve
 grapity registry push ./openapi.yaml --name payments-api
-grapity gateway provision --spec payments-api@1.0.0 --env staging --profile public-api
-grapity gateway diff --spec payments-api --env staging --env prod
 ```
 
 **Website:** [grapity.dev](https://grapity.dev) &nbsp;·&nbsp; **X:** [@grapitydev](https://x.com/grapitydev)
